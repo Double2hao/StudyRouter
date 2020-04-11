@@ -1,0 +1,6 @@
+rootProject.name='StudyRouter'
+include ':app'
+include ':studyrouter-processor'
+include ':studyrouter-annotation'
+include ':studyrouter-plugin'
+include ':studyrouter-api'

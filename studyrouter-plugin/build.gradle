@@ -1,0 +1,31 @@
+apply plugin: 'groovy'
+apply plugin: 'maven'
+apply plugin: 'java'
+
+dependencies {
+    compile gradleApi()//gradle sdk
+    compile localGroovy()//groovy sdk
+
+    implementation 'com.android.tools.build:gradle:3.6.1'
+    implementation 'org.javassist:javassist:3.27.0-GA'//用于编辑class文件
+}
+
+repositories {
+    mavenCentral()
+}
+
+//提交仓库到本地目录
+def version = "1.0.0";
+def artifactId = "studyrouter-plugin";
+def groupId = "com.example.studyrouter.plugin";
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: uri('./repo')) {
+                pom.groupId = groupId
+                pom.artifactId = artifactId
+                pom.version = version
+            }
+        }
+    }
+}

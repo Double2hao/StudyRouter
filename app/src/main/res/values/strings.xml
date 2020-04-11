@@ -1,0 +1,8 @@
+<resources>
+  <string name="app_name">StudyRouter</string>
+  <string name="main_desp">init first,goto page after</string>
+  <string name="mian_init">StudyRouter init</string>
+  <string name="main_goto_page">StudyRouter gotoPage</string>
+  <string name="main_toast_init">StudyRouter init</string>
+  <string name="main_toast_goto_page">StudyRouter gotoPage</string>
+</resources>

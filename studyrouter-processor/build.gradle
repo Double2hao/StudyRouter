@@ -1,0 +1,11 @@
+apply plugin: 'java-library'
+
+dependencies {
+  implementation project( ':studyrouter-annotation')
+  implementation 'com.squareup:javapoet:1.12.1'
+  compileOnly 'com.google.auto.service:auto-service:1.0-rc4'
+  annotationProcessor 'com.google.auto.service:auto-service:1.0-rc4'
+}
+
+sourceCompatibility = "7"
+targetCompatibility = "7"
