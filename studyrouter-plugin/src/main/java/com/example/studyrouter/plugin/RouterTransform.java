@@ -16,6 +16,10 @@ import com.android.build.gradle.internal.pipeline.TransformManager;
 /**
  * author: xujiajia
  * description:
+ * 先遍历jar文件和class文件，然后再根据遍历的内容插入初始化的代码。
+ * 遍历主要会记录两个内容：
+ * 1、记录注解解释器创建的辅助类
+ * 2、记录要插入代码的类的位置，即StudyRouterManager的位置
  */
 public class RouterTransform extends Transform {
 

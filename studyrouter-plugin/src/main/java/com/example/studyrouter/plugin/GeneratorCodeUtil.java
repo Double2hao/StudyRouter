@@ -19,7 +19,8 @@ import org.objectweb.asm.Opcodes;
 /**
  * author: xujiajia
  * description:
- * 这里只需要处理jar的情况就可以，因为开发者一定会以jar的方式引用RouterManager
+ * 用于在RouterManager中插入代码
+ * 这里只需要处理jar的情况就可以，因为RouterManager写在一个单独的module中，其他模块会以jar的方式引用
  */
 public class GeneratorCodeUtil {
 

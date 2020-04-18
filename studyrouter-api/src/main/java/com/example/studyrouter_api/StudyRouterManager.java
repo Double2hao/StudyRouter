@@ -19,12 +19,14 @@ public class StudyRouterManager {
   //data
   private static HashMap<String, String> map = new HashMap<>();
 
+  //初始化
   public static void initAutoRegister() {
     Log.d(TAG, "initAutoRegister");
     //这里会通过plugin动态生成代码，如：
     //autoWisedClassInit("com.example.generated.SubActivity_Router_AutoWised");
   }
 
+  //通过反射来调用辅助类的init方法，将注解中的内容注册到map中
   private static void autoWisedClassInit(String className) {
     Log.d(TAG, "autoWisedClassInit className:" + className);
     try {
@@ -43,6 +45,7 @@ public class StudyRouterManager {
     map.put(key, className);
   }
 
+  //通过反射来跳转activity
   public static void gotoPage(Activity activity, String key) {
     Log.d(TAG, "gotoPage map:" + map.toString());
     if (activity == null || TextUtils.isEmpty(key) || TextUtils.isEmpty(map.get(key))) {

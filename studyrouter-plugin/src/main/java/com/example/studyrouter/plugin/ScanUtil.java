@@ -15,6 +15,9 @@ import org.objectweb.asm.Opcodes;
 /**
  * author: xujiajia
  * description:
+ * 用于遍历jar文件和class文件，遍历主要会记录两个内容：
+ * 1、记录注解解释器创建的辅助类
+ * 2、记录要插入代码的类的位置，即StudyRouterManager的位置
  */
 class ScanUtil {
 

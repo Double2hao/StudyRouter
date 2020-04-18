@@ -27,6 +27,7 @@ import com.squareup.javapoet.TypeSpec;
 /**
  * author: xujiajia
  * description:
+ * 通过使用注解解释器来生成辅助类，辅助类如：com.example.generated.SubActivity_Router_AutoWised
  */
 @AutoService(Processor.class)
 //@AutoService(Processor.class)是一个注解处理器，是Google开发的，用来生成META-INF/services/javax.annotation.processing.Processor文件的。
